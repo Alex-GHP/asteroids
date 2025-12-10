@@ -29,6 +29,7 @@ def main():
     player = Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
 
     dt = 0
+    score = 0 
 
     while True:
         log_state()
@@ -51,6 +52,8 @@ def main():
                     log_event("asteroid_shot")
                     shot.kill()
                     asteroid.split()
+                    score += 1
+                    print(f"Score: {score}")
         
         screen.fill("black")
 
